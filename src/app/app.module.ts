@@ -15,15 +15,15 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   providers: [],
   schemas: [],
   entryComponents: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule {
-  // constructor(private injector: Injector) {
-  // }
+  constructor(private injector: Injector) {
+  }
 
-  // ngDoBootstrap() {
-  //   const Elm = createCustomElement(AppComponent, { injector: this.injector });
-  //   customElements.define('my-element', Elm);
-  // }
+  ngDoBootstrap() {
+    const Elm = createCustomElement(AppComponent, { injector: this.injector });
+    customElements.define('my-element', Elm);
+  }
 
 }
