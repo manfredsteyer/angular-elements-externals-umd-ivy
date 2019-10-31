@@ -13,17 +13,17 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     BrowserModule
   ],
   providers: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
   entryComponents: [AppComponent],
-  bootstrap: []
+  bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-  }
+  // constructor(private injector: Injector) {
+  // }
 
-  ngDoBootstrap() {
-    const Elm = createCustomElement(AppComponent, { injector: this.injector });
-    customElements.define('my-element', Elm);
-  }
+  // ngDoBootstrap() {
+  //   const Elm = createCustomElement(AppComponent, { injector: this.injector });
+  //   customElements.define('my-element', Elm);
+  // }
 
 }
